@@ -28,4 +28,4 @@ envio:
     nomeRemetente: 'Javamaster'
 
 server:
-  port: 8083
+  port: 8084

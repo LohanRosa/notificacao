@@ -38,6 +38,7 @@ public class EmailService {
             meimeMenssageHelper.setTo(InternetAddress.parse(dto.getEmailUsuario()));
             meimeMenssageHelper.setSubject("Notificação de Tarefa");
 
+
             Context context = new Context();
             context.setVariable("nomeTarefa", dto.getNomeTarefa());
             context.setVariable("dataEvento", dto.getDataEvento());
@@ -49,5 +50,7 @@ public class EmailService {
         } catch(MessagingException | UnsupportedEncodingException e){
             throw new EmailException("Erro ao enviar o email ", e.getCause());
         }
+
+
     }
 }
